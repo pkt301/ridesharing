@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - RideShare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1><a href="index.html" style="text-decoration: none; color: inherit;">🚗 RideShare</a></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#how-it-works">How It Works</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="delete-account-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1>Delete Account</h1>
+                    <p class="form-subtitle">We're sorry to see you go. Please fill out the form below to request account deletion.</p>
+                    <div class="warning-box">
+                        <p>⚠️ <strong>Warning:</strong> This action cannot be undone. All your data, ride history, and account information will be permanently deleted.</p>
+                    </div>
+                </div>
+
+                <form id="deleteAccountForm" class="delete-account-form" onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name <span class="required">*</span></label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            placeholder="Enter your full name"
+                            class="form-input"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Registered Email <span class="required">*</span></label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            placeholder="Enter your registered email address"
+                            class="form-input"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Registered Phone <span class="required">*</span></label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            required 
+                            placeholder="Enter your registered phone number"
+                            class="form-input"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reason">Reason (Optional)</label>
+                        <textarea 
+                            id="reason" 
+                            name="reason" 
+                            rows="4" 
+                            placeholder="Please let us know why you're deleting your account (optional)"
+                            class="form-textarea"
+                        ></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input 
+                                type="checkbox" 
+                                id="confirm" 
+                                name="confirm" 
+                                required
+                                class="form-checkbox"
+                            >
+                            <span>I understand that this action is permanent and cannot be undone. I confirm that I want to delete my account.</span>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-danger">Delete My Account</button>
+                        <a href="index.html" class="btn btn-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>RideShare</h3>
+                    <p>Connecting people, one ride at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RideShare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            
+            // Show confirmation dialog
+            const confirmed = confirm(
+                'Are you absolutely sure you want to delete your account?\n\n' +
+                'This action is permanent and cannot be undone. All your data will be permanently deleted.\n\n' +
+                'Click OK to proceed or Cancel to go back.'
+            );
+            
+            if (confirmed) {
+                // In a real application, this would send the data to a server
+                // For now, we'll just show a success message
+                alert('Account deletion request submitted successfully.\n\n' +
+                      'We will process your request and send a confirmation email to: ' + data.email + '\n\n' +
+                      'If you have any questions, please contact us at pktiwari110487@gmail.com');
+                
+                // Reset form
+                form.reset();
+                
+                // Optionally redirect to home page
+                // window.location.href = 'index.html';
+            }
+        }
+    </script>
+</body>
+</html>
+

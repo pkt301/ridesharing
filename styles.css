@@ -136,6 +136,18 @@ body {
     color: var(--primary-color);
 }
 
+/* Secondary button for forms (different styling) */
+.delete-account-form .btn-secondary {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    border: 2px solid var(--border-color);
+}
+
+.delete-account-form .btn-secondary:hover {
+    background-color: var(--border-color);
+    color: var(--text-dark);
+}
+
 /* Sections */
 section {
     padding: 5rem 0;
@@ -390,6 +402,145 @@ section {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* Delete Account Form */
+.delete-account-section {
+    padding: 4rem 0;
+    background-color: var(--bg-light);
+    min-height: calc(100vh - 200px);
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.form-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.form-subtitle {
+    color: var(--text-light);
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.warning-box {
+    background-color: #FEF2F2;
+    border: 2px solid #FCA5A5;
+    border-radius: 0.5rem;
+    padding: 1rem 1.25rem;
+    margin-top: 1.5rem;
+    text-align: left;
+}
+
+.warning-box p {
+    color: #991B1B;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.delete-account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+}
+
+.required {
+    color: #DC2626;
+}
+
+.form-input,
+.form-textarea {
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.checkbox-group {
+    margin-top: 0.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+.form-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    cursor: pointer;
+    accent-color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-danger {
+    background-color: #DC2626;
+    color: var(--white);
+    border: none;
+    flex: 1;
+    min-width: 150px;
+}
+
+.btn-danger:hover {
+    background-color: #B91C1C;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
@@ -421,6 +572,23 @@ section {
     .feature-grid {
         grid-template-columns: 1fr;
     }
+
+    .form-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-header h1 {
+        font-size: 2rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-danger,
+    .btn-secondary {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -443,6 +611,18 @@ section {
 
     section {
         padding: 3rem 0;
+    }
+
+    .form-container {
+        padding: 1.5rem 1rem;
+    }
+
+    .form-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .form-subtitle {
+        font-size: 1rem;
     }
 }
 
