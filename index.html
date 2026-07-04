@@ -1,144 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rido - Your Journey, Our Mission</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rido · Ride Together, Save Together</title>
+    <meta name="description" content="Rido is a smart ridesharing app that connects drivers and passengers going the same way. Safe, affordable, and eco-friendly." />
+    <meta name="theme-color" content="#1e6cd9" />
+    <meta property="og:title" content="Rido · Ride Together, Save Together" />
+    <meta property="og:description" content="Connect with drivers and passengers going your way. Safe, affordable, and eco-friendly ridesharing." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+    <link rel="apple-touch-icon" href="assets/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <h1>🚗 Rido</h1>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
-            </ul>
+    <header class="nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="brand">
+                <img src="assets/logo.svg" alt="Rido logo" />
+                <span class="brand-name">Ri<span class="accent">do</span></span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#features">Features</a>
+                <a href="#how">How it works</a>
+                <a href="#contact">Contact</a>
+                <a href="privacy.html">Privacy</a>
+                <a href="delete-account.html">Delete Account</a>
+                <a href="https://play.google.com/store/apps/details?id=com.godrive.rideshare" class="btn" target="_blank" rel="noopener noreferrer">Get the App</a>
+            </nav>
+            <button class="hamburger" aria-label="Toggle menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-    </nav>
+    </header>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Ride Together, Save Together</h1>
-                <p class="hero-subtitle">Connect with drivers and passengers going your way. Safe, affordable, and eco-friendly ridesharing.</p>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="alert('Download app coming soon!')">Download App</button>
-                    <button class="btn btn-secondary" onclick="alert('Sign up coming soon!')">Sign Up</button>
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div>
+                <span class="eyebrow"><span class="dot"></span> Ride Together. Save Together.</span>
+                <h1>Your journey, shared <span class="grad">the smarter way.</span></h1>
+                <p class="lead">
+                    Connect with verified drivers and passengers going your way. Book rides,
+                    track trips in real time, and split costs — all in one safe, affordable app.
+                </p>
+                <div class="hero-cta">
+                    <a href="https://play.google.com/store/apps/details?id=com.godrive.rideshare" class="btn accent" target="_blank" rel="noopener noreferrer">Download for Android</a>
+                    <a href="#features" class="btn ghost">See features</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone phone-back">
+                    <div class="screen">
+                        <div class="app-screen">
+                            <p class="app-greeting" style="font-size:18px;">My Rides</p>
+                            <p class="app-sub">2 upcoming · 1 completed</p>
+                            <div class="app-ride-card">
+                                <div class="ride-row">
+                                    <span class="ride-dot green"></span>
+                                    <span>Pune Station</span>
+                                </div>
+                                <div class="ride-row">
+                                    <span class="ride-dot orange"></span>
+                                    <span>Mumbai Airport</span>
+                                </div>
+                                <div class="ride-meta">
+                                    <span>Tomorrow · 7:00 AM</span>
+                                    <span class="ride-price">₹ 420</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone">
+                    <div class="screen">
+                        <div class="app-screen">
+                            <div class="app-top">
+                                <span>📍 Mumbai</span>
+                                <span>9:41</span>
+                            </div>
+                            <p class="app-greeting">Where to?</p>
+                            <p class="app-sub">Find a ride or offer yours</p>
+                            <div class="app-search">
+                                <span>🟢</span>
+                                <div><strong>Current location</strong>Andheri West</div>
+                            </div>
+                            <div class="app-search">
+                                <span>🟠</span>
+                                <div><strong>Drop location</strong>Bandra Kurla Complex</div>
+                            </div>
+                            <div class="app-ride-card">
+                                <div class="ride-row">
+                                    <span class="ride-dot green"></span>
+                                    <span>Andheri West</span>
+                                </div>
+                                <div class="ride-row">
+                                    <span class="ride-dot orange"></span>
+                                    <span>Bandra Kurla Complex</span>
+                                </div>
+                                <div class="ride-meta">
+                                    <span>3 seats · 18 min</span>
+                                    <span class="ride-price">₹ 185</span>
+                                </div>
+                                <button class="app-btn" type="button">Book Ride</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="float-card fc-1">
+                    <div class="ico blue">🚗</div>
+                    <div>
+                        Ride matched
+                        <div class="amount">Priya · 4.9 ★ · 3 min away</div>
+                    </div>
+                </div>
+                <div class="float-card fc-2">
+                    <div class="ico green">✓</div>
+                    <div>
+                        Trip completed
+                        <div class="amount">Saved ₹420 vs solo cab</div>
+                    </div>
+                </div>
+                <div class="float-card fc-3">
+                    <div class="ico orange">📍</div>
+                    <div>
+                        Live tracking
+                        <div class="amount">ETA 12 min · on route</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="how-it-works" class="how-it-works">
+    <section class="stats">
+        <div class="container stats-grid">
+            <div class="stat"><strong>Verified</strong><span>All users ID-checked</span></div>
+            <div class="stat"><strong>Live GPS</strong><span>Real-time ride tracking</span></div>
+            <div class="stat"><strong>Save 40%</strong><span>vs solo cab rides</span></div>
+            <div class="stat"><strong>Free</strong><span>To download &amp; sign up</span></div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
+            <h2 class="section-title">Everything you need for a shared ride</h2>
+            <p class="section-sub">From booking to drop-off — Rido keeps your commute safe, affordable, and stress-free.</p>
+            <div class="feat-grid">
+                <div class="feat-card">
+                    <div class="feat-icon ico-1">🔒</div>
+                    <h3>Safe &amp; Verified</h3>
+                    <p>Every user is identity-verified. Ratings, reviews, and live tracking keep you safe on every trip.</p>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon ico-2">💰</div>
+                    <h3>Affordable Rides</h3>
+                    <p>Share the cost of your commute. Split fares automatically and save money on every journey.</p>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon ico-3">🌱</div>
+                    <h3>Eco-Friendly</h3>
+                    <p>Fewer cars on the road means a smaller carbon footprint. Ride together, travel greener.</p>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon ico-4">📍</div>
+                    <h3>Real-Time Tracking</h3>
+                    <p>Track your ride live with GPS. Share your trip with friends and family for extra peace of mind.</p>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon ico-5">⭐</div>
+                    <h3>Rated Community</h3>
+                    <p>Rate drivers and passengers after every ride. A trusted community built on transparency.</p>
+                </div>
+                <div class="feat-card">
+                    <div class="feat-icon ico-6">💬</div>
+                    <h3>Easy Communication</h3>
+                    <p>Chat with your driver or passenger before the ride. Coordinate pickup without the hassle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how" id="how">
+        <div class="container">
+            <h2 class="section-title">Get started in 4 easy steps</h2>
+            <p class="section-sub">No hassle. No hidden fees. Just ride.</p>
             <div class="steps">
                 <div class="step">
-                    <div class="step-icon">1</div>
-                    <h3>Sign Up</h3>
-                    <p>Create your account in minutes. Verify your identity for safety.</p>
+                    <h3>Sign up</h3>
+                    <p>Create your account in minutes and verify your identity for safety.</p>
                 </div>
                 <div class="step">
-                    <div class="step-icon">2</div>
-                    <h3>Find a Ride</h3>
-                    <p>Search for rides or offer your own. Match with verified users.</p>
+                    <h3>Find a ride</h3>
+                    <p>Search for rides going your way or offer your own to matched passengers.</p>
                 </div>
                 <div class="step">
-                    <div class="step-icon">3</div>
-                    <h3>Ride & Pay</h3>
-                    <p>Enjoy your journey and pay securely through the app.</p>
+                    <h3>Ride &amp; track</h3>
+                    <p>Enjoy your journey with live GPS tracking and in-app communication.</p>
+                </div>
+                <div class="step">
+                    <h3>Pay &amp; rate</h3>
+                    <p>Pay securely through the app and rate your experience to help the community.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="features" class="features">
-        <div class="container">
-            <h2 class="section-title">Why Choose Rido?</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Safe & Secure</h3>
-                    <p>All users are verified. Your safety is our top priority.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>Affordable</h3>
-                    <p>Share costs and save money on your daily commute.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌱</div>
-                    <h3>Eco-Friendly</h3>
-                    <p>Reduce carbon footprint by sharing rides.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⭐</div>
-                    <h3>Rated System</h3>
-                    <p>Rate and review drivers and passengers for quality assurance.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📍</div>
-                    <h3>Real-Time Tracking</h3>
-                    <p>Track your ride in real-time with GPS integration.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3>Easy Communication</h3>
-                    <p>Chat with your driver or passenger before the ride.</p>
-                </div>
+    <section id="download" style="padding-top: 0;">
+        <div class="cta">
+            <h2>Ready to ride together, smarter?</h2>
+            <p>Download Rido and make your next commute affordable, safe, and eco-friendly.</p>
+            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                <a class="btn" href="https://play.google.com/store/apps/details?id=com.godrive.rideshare" target="_blank" rel="noopener noreferrer">Download on Google Play</a>
+                <a class="btn ghost" href="mailto:pktiwari110487@gmail.com">Contact Support</a>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title">Get in Touch</h2>
-            <div class="contact-content">
-                <p>Have questions? We'd love to hear from you!</p>
-                <div class="contact-info">
-                    <p>📧 Email: pktiwari110487@gmail.com</p>
-                    <p>📞 Phone: +91 9026317151</p>
-                </div>
+            <p class="section-sub">Have questions? We'd love to hear from you.</p>
+            <div class="contact-card">
+                <p>📧 <a href="mailto:pktiwari110487@gmail.com">pktiwari110487@gmail.com</a></p>
+                <p>📞 <a href="tel:+919026317151">+91 9026317151</a></p>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Rido</h3>
-                    <p>Connecting people, one ride at a time.</p>
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="brand" style="margin-bottom: 12px;">
+                        <img src="assets/logo.svg" alt="Rido" />
+                        <span class="brand-name" style="color:#fff;">Ri<span style="color:var(--accent);">do</span></span>
+                    </a>
+                    <p style="margin: 0; font-size: 14.5px; color: #8896b3; max-width: 320px;">
+                        Connecting people, one ride at a time. Safe, affordable, and eco-friendly ridesharing for everyone.
+                    </p>
                 </div>
-                <div class="footer-section">
+                <div>
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how">How it works</a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.godrive.rideshare" target="_blank" rel="noopener noreferrer">Download</a></li>
+                    </ul>
+                </div>
+                <div>
                     <h4>Legal</h4>
                     <ul>
                         <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
                         <li><a href="delete-account.html">Delete Account</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
+                <div>
+                    <h4>Contact</h4>
                     <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="mailto:pktiwari110487@gmail.com">pktiwari110487@gmail.com</a></li>
+                        <li><a href="tel:+919026317151">+91 9026317151</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Rido. All rights reserved.</p>
-            </div>
+            <div class="copyright">&copy; <span id="year"></span> Rido. All rights reserved.</div>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
