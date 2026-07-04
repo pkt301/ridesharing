@@ -1,3 +1,20 @@
+// Screenshot gallery thumbs
+document.querySelectorAll('.gallery-thumbs').forEach(gallery => {
+    const galleryType = gallery.dataset.gallery;
+    const mainImg = document.getElementById(galleryType + 'Main');
+    if (!mainImg) return;
+
+    gallery.querySelectorAll('.thumb').forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            const src = thumb.dataset.src;
+            if (!src) return;
+            mainImg.src = src;
+            gallery.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        });
+    });
+});
+
 // Nav hamburger closes on link click
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
