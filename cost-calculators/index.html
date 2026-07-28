@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Daily Travel Cost & Fuel Price Calculators India | Rydo</title>
+<meta name="description" content="Calculate daily commute cost, monthly fuel expense, parking, maintenance, yearly travel budget, and fuel-price impact. See savings with ride sharing." />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+<meta name="theme-color" content="#FFCB05" />
+<link rel="canonical" href="https://ridesharing.pktiwari110487.workers.dev/cost-calculators/" />
+<meta property="og:title" content="Daily Travel Cost & Fuel Price Calculators India | Rydo" />
+<meta property="og:description" content="Calculate daily commute cost, monthly fuel expense, parking, maintenance, yearly travel budget, and fuel-price impact. See savings with ride sharing." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ridesharing.pktiwari110487.workers.dev/cost-calculators/" />
+<meta property="og:image" content="https://ridesharing.pktiwari110487.workers.dev/assets/brand-logo.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/png" href="../assets/icon.png" />
+<link rel="apple-touch-icon" href="../assets/icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/styles.css" />
+
+</head>
+<body>
+
+    <header class="nav">
+        <div class="container nav-inner">
+            <a href="../index.html" class="brand"><img src="../assets/brand-logo.png" alt="Rydo" /></a>
+            <nav class="nav-links" id="navLinks">
+                <a href="../index.html#riders">For Riders</a>
+                <a href="../index.html#captains">For Captains</a>
+                <a href="../guides/index.html">Guides</a>
+                <a href="../blog/index.html">Blog</a>
+                <a href="../privacy.html">Privacy</a>
+                <a href="https://play.google.com/store/apps/details?id=com.godrive.rideshare" class="btn" target="_blank" rel="noopener noreferrer">Get the App</a>
+            </nav>
+            <button class="hamburger" aria-label="Toggle menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="../guides/index.html">Guides</a> / <span>Cost Calculators</span></nav><div class="page-header"><div class="container">
+<span class="eyebrow">Cost Calculators</span><h1>How much does your daily commute really cost?</h1><p>Many people underestimate fuel, maintenance, parking, and yearly vehicle expenses. Use these calculators to see the real numbers.</p>
+</div></div>
+<section class="guides-hub"><div class="container"><div class="article-body">
+<div class="callout">Estimates are for personal budgeting. On Rydo, shared amounts are <strong>voluntary fuel &amp; toll contributions</strong> — not taxi fares. Rydo is carpool &amp; seat share only.</div>
+
+<h2 id="daily">1. Daily Travel Cost Calculator</h2>
+<p>Calculate daily fuel cost, monthly fuel expense, maintenance, parking, and total yearly travel expense.</p>
+<div class="calc-box">
+  <div class="calc-grid">
+    <div><label for="d_dist">One-way distance (km)</label><input id="d_dist" type="number" value="15" min="1" /></div>
+    <div><label for="d_days">Commuting days / month</label><input id="d_days" type="number" value="22" min="1" max="31" /></div>
+    <div><label for="d_price">Fuel cost (₹ / litre)</label><input id="d_price" type="number" value="100" min="1" /></div>
+    <div><label for="d_mile">Mileage (km / litre)</label><input id="d_mile" type="number" value="15" min="1" step="0.1" /></div>
+    <div><label for="d_maint">Monthly maintenance (₹)</label><input id="d_maint" type="number" value="1500" min="0" /></div>
+    <div><label for="d_park">Monthly parking (₹)</label><input id="d_park" type="number" value="1500" min="0" /></div>
+    <div><label for="d_other">Other monthly costs (₹)</label><input id="d_other" type="number" value="500" min="0" title="Toll passes, cleaning, etc." /></div>
+    <div><label for="d_seats">Seats if you share rides</label><input id="d_seats" type="number" value="3" min="1" max="8" /></div>
+  </div>
+  <div class="calc-result">
+    <strong id="d_out">₹ —</strong>
+    <span id="d_detail">Enter your commute details above.</span>
+  </div>
+</div>
+
+<h3>Example</h3>
+<table>
+<thead><tr><th>Your daily commute</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Distance</td><td>30 km/day (round trip)</td></tr>
+<tr><td>Fuel cost</td><td>₹100 / litre</td></tr>
+<tr><td>Mileage</td><td>15 km / litre</td></tr>
+<tr><td>Monthly fuel expense</td><td><strong>₹6,000+</strong> (≈22 days)</td></tr>
+<tr><td>Yearly fuel expense</td><td><strong>₹72,000+</strong></td></tr>
+</tbody>
+</table>
+<p>Sharing rides can reduce your monthly travel burden — especially when fuel, parking, and maintenance are included.</p>
+
+<h2 id="fuel-impact">2. Fuel Price Impact Calculator</h2>
+<p>See how fuel price changes affect your monthly budget and potential savings through shared travel.</p>
+<div class="calc-box">
+  <div class="calc-grid">
+    <div><label for="f_type">Vehicle type</label>
+      <select id="f_type">
+        <option value="14">Petrol hatchback (~14 km/l)</option>
+        <option value="12">Petrol sedan (~12 km/l)</option>
+        <option value="18">CNG / efficient (~18 km/l eq.)</option>
+        <option value="35">Motorcycle (~35 km/l)</option>
+        <option value="20">Small SUV / diesel (~20 km/l)</option>
+      </select>
+    </div>
+    <div><label for="f_dist">Daily round-trip distance (km)</label><input id="f_dist" type="number" value="30" min="1" /></div>
+    <div><label for="f_mile">Mileage override (km/l, optional)</label><input id="f_mile" type="number" value="" min="1" step="0.1" placeholder="Uses vehicle default if empty" /></div>
+    <div><label for="f_price">Current fuel price (₹/l)</label><input id="f_price" type="number" value="100" min="1" /></div>
+    <div><label for="f_price2">Compare at price (₹/l)</label><input id="f_price2" type="number" value="110" min="1" /></div>
+    <div><label for="f_days">Days / month</label><input id="f_days" type="number" value="22" min="1" /></div>
+    <div><label for="f_share">Shared seats (for savings)</label><input id="f_share" type="number" value="3" min="1" max="8" /></div>
+  </div>
+  <div class="calc-result">
+    <strong id="f_out">₹ —</strong>
+    <span id="f_detail">Adjust fuel prices to see budget impact.</span>
+  </div>
+</div>
+
+<h2 id="per-seat">3. Per-seat fuel share (quick)</h2>
+<p>Estimate a fair voluntary share for one trip.</p>
+<div class="calc-box">
+  <div class="calc-grid">
+    <div><label for="p_dist">Trip distance (km)</label><input id="p_dist" type="number" value="110" /></div>
+    <div><label for="p_price">Fuel ₹/l</label><input id="p_price" type="number" value="100" /></div>
+    <div><label for="p_mile">Mileage km/l</label><input id="p_mile" type="number" value="15" step="0.1" /></div>
+    <div><label for="p_toll">Tolls ₹</label><input id="p_toll" type="number" value="120" /></div>
+    <div><label for="p_seats">Occupied seats</label><input id="p_seats" type="number" value="3" min="1" /></div>
+  </div>
+  <div class="calc-result"><strong id="p_out">₹ —</strong><span id="p_detail"></span></div>
+</div>
+
+<h2>What most people forget</h2>
+<ul>
+<li><strong>Daily fuel cost</strong> — only the tip of the iceberg</li>
+<li><strong>Monthly fuel expense</strong> — multiplies fast with round trips</li>
+<li><strong>Vehicle maintenance</strong> — servicing, tyres, brakes</li>
+<li><strong>Parking charges</strong> — office and destination parking</li>
+<li><strong>Yearly travel expense</strong> — often ₹50,000–₹1,50,000+ for solo car commuters</li>
+</ul>
+<p>Read next: <a href="../commuter-tips/how-to-save-money-on-daily-travel.html">10 smart ways to reduce transportation expenses</a> ·
+<a href="../blog/complete-guide-to-carpooling.html">Complete guide to carpooling</a></p>
+
+<!-- LEAD-EXPANDED-v1 -->
+<h2>How to use these calculators to get leads for your own budget</h2>
+<p>Most people only remember today's petrol price. Calculators make the full picture visible: daily fuel, monthly burn, parking, maintenance, and yearly totals. Once you see the yearly number, shared travel becomes an obvious experiment.</p>
+<h3>Recommended workflow</h3>
+<ol>
+<li>Enter your real one-way distance and commuting days.</li>
+<li>Add parking and a realistic maintenance estimate.</li>
+<li>Note the yearly total.</li>
+<li>Change “shared seats” to 2, 3, or 4 and compare fuel savings.</li>
+<li>Use the fuel-price impact tool when rates rise by ₹5–₹10/litre.</li>
+</ol>
+<h3>What Rydo users do next</h3>
+<p>After estimating savings, captains activate their daily route and riders request seats on the same corridor. OTP verification protects both sides. Live tracking keeps family informed. Share fuel cost stays transparent — voluntary contribution, not surge fare.</p>
+<div class="lead-box">
+  <h2>Calculated your cost? Now cut it.</h2>
+  <p>Download Rydo and match people already going your way.</p>
+  <div class="lead-actions">
+    <a class="btn accent" href="https://play.google.com/store/apps/details?id=com.godrive.rideshare" target="_blank" rel="noopener noreferrer">Download on Google Play</a>
+    <a class="btn ghost" href="../blog/complete-guide-to-carpooling.html">Read carpooling guide</a>
+  </div>
+</div>
+<h2>Frequently asked questions about travel costs</h2>
+<div class="faq">
+<details><summary>Should I include parking in commute cost?</summary><p>Yes. Office parking and paid lots often add thousands per year and are easy to forget when people only track fuel.</p></details>
+<details><summary>Is share fuel cost a taxi fare?</summary><p>No. On Rydo it is a voluntary fuel/toll contribution between private travellers on a similar route — not commercial transport pricing.</p></details>
+<details><summary>How many seats should I assume?</summary><p>Start with your realistic average occupancy (often 2–3 for office corridors). Recalculate after two weeks of real matching.</p></details>
+<details><summary>Can students use these calculators?</summary><p>Absolutely. College routes with stable timings are excellent candidates for shared travel savings.</p></details>
+</div>
+
+</div></div></section>
+<script>
+(function(){
+  const n=id=>parseFloat(document.getElementById(id).value)||0;
+  const nv=id=>{const el=document.getElementById(id); const v=parseFloat(el.value); return isNaN(v)?null:v;};
+  function daily(){
+    const one=n('d_dist'), days=n('d_days'), price=n('d_price'), mile=Math.max(0.1,n('d_mile'));
+    const maint=n('d_maint'), park=n('d_park'), other=n('d_other'), seats=Math.max(1,n('d_seats'));
+    const dailyKm=one*2, dailyFuel=(dailyKm/mile)*price;
+    const monthFuel=dailyFuel*days;
+    const monthTotal=monthFuel+maint+park+other;
+    const year=monthTotal*12;
+    const sharedMonth=monthFuel/seats + maint*0.5 + park*0.5 + other; // rough shared scenario
+    const save=monthTotal-(monthFuel/seats+maint+park+other); // if only fuel shared
+    const saveFuelOnly=monthFuel-(monthFuel/seats);
+    document.getElementById('d_out').textContent='Yearly ≈ ₹'+Math.round(year).toLocaleString('en-IN');
+    document.getElementById('d_detail').textContent=
+      'Daily fuel ≈ ₹'+Math.round(dailyFuel)+' · Monthly fuel ≈ ₹'+Math.round(monthFuel)+
+      ' · Monthly total (fuel+maint+parking+other) ≈ ₹'+Math.round(monthTotal)+
+      ' · If fuel is shared across '+seats+' seats, fuel savings ≈ ₹'+Math.round(saveFuelOnly)+'/month.';
+  }
+  function fuelImpact(){
+    const typeM=n('f_type'); let mile=nv('f_mile'); if(mile===null) mile=typeM;
+    mile=Math.max(0.1,mile);
+    const dist=n('f_dist'), p1=n('f_price'), p2=n('f_price2'), days=n('f_days'), seats=Math.max(1,n('f_share'));
+    const m1=((dist/mile)*p1)*days, m2=((dist/mile)*p2)*days;
+    const diff=m2-m1;
+    const shareSave=m1-(m1/seats);
+    document.getElementById('f_out').textContent=
+      (diff>=0?'+':'')+'₹'+Math.round(diff).toLocaleString('en-IN')+' / month if price moves to ₹'+p2;
+    document.getElementById('f_detail').textContent=
+      'At ₹'+p1+'/l monthly fuel ≈ ₹'+Math.round(m1)+'. At ₹'+p2+'/l ≈ ₹'+Math.round(m2)+
+      '. Yearly at current price ≈ ₹'+Math.round(m1*12)+
+      '. Possible monthly savings if fuel shared by '+seats+' people ≈ ₹'+Math.round(shareSave)+'.';
+  }
+  function perSeat(){
+    const dist=n('p_dist'), price=n('p_price'), mile=Math.max(0.1,n('p_mile')), toll=n('p_toll'), seats=Math.max(1,n('p_seats'));
+    const fuel=(dist/mile)*price, total=fuel+toll, per=total/seats;
+    document.getElementById('p_out').textContent='≈ ₹'+Math.round(per)+' per seat';
+    document.getElementById('p_detail').textContent='Fuel ₹'+Math.round(fuel)+' + tolls ₹'+Math.round(toll)+' = ₹'+Math.round(total)+' ÷ '+seats+' seats (voluntary share estimate).';
+  }
+  ['d_dist','d_days','d_price','d_mile','d_maint','d_park','d_other','d_seats'].forEach(id=>document.getElementById(id).addEventListener('input',daily));
+  ['f_type','f_dist','f_mile','f_price','f_price2','f_days','f_share'].forEach(id=>document.getElementById(id).addEventListener('input',fuelImpact));
+  ['f_type'].forEach(id=>document.getElementById(id).addEventListener('change',fuelImpact));
+  ['p_dist','p_price','p_mile','p_toll','p_seats'].forEach(id=>document.getElementById(id).addEventListener('input',perSeat));
+  daily(); fuelImpact(); perSeat();
+})();
+</script>
+
+    <footer class="footer" style="margin-top:40px;">
+        <div class="container">
+            <div class="footer-grid footer-grid-5">
+                <div>
+                    <a href="../index.html" class="brand" style="margin-bottom:12px;"><img src="../assets/brand-logo.png" alt="Rydo" /></a>
+                    <p class="footer-desc">Route-based carpool &amp; seat share for private commuters in India. Share fuel costs — not a taxi.</p>
+                </div>
+                <div><h4>App</h4><ul>
+                    <li><a href="../index.html#riders">For Riders</a></li>
+                    <li><a href="../index.html#captains">For Captains</a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.godrive.rideshare" target="_blank" rel="noopener noreferrer">Download</a></li>
+                </ul></div>
+                <div><h4>Resources</h4><ul>
+                    <li><a href="../travel-guides/index.html">Travel Guides</a></li>
+                    <li><a href="../cost-calculators/index.html">Cost Calculators</a></li>
+                    <li><a href="../safety-guides/index.html">Safety Guides</a></li>
+                    <li><a href="../city-guides/index.html">City Guides</a></li>
+                </ul></div>
+                <div><h4>Learn</h4><ul>
+                    <li><a href="../commuter-tips/index.html">Commuter Tips</a></li>
+                    <li><a href="../sustainability/index.html">Sustainability</a></li>
+                    <li><a href="../blog/index.html">Blog</a></li>
+                    <li><a href="../guides/index.html">All Guides</a></li>
+                </ul></div>
+                <div><h4>Legal &amp; Contact</h4><ul>
+                    <li><a href="../privacy.html">Privacy Policy</a></li>
+                    <li><a href="../delete-account.html">Delete Account</a></li>
+                    <li><a href="mailto:pktiwari110487@gmail.com">pktiwari110487@gmail.com</a></li>
+                </ul></div>
+            </div>
+            <div class="copyright">&copy; <span id="year"></span> Rydo · Trishika Enterprises. All rights reserved.</div>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+</body></html>

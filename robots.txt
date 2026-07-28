@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ridesharing.pktiwari110487.workers.dev/sitemap.xml
